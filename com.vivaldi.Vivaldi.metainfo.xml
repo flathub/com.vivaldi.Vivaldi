@@ -9,13 +9,22 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">https://vivaldi.com/</url>
-  <description>
+<description>
     <p>
-      Vivaldi is packed with features – all built into the browser. There are tons of options you can play with, from the super flexible user interface to shortcuts and custom macros.
+      Vivaldi is a feature-packed web browser for techies and people who need a browser that helps them get things done.
+      The user interface is fully customizable, including keyboard shortcuts, mouse gestures, and programmable macros.
     </p>
     <p>
       NOTE: This package is not officially endorsed or supported by Vivaldi Technologies.
     </p>
+    <ul>
+      <li>Seize back control of your tab glut with features like Workspaces, Tab Stacks, and Tab Tiling.</li>
+      <li>Stay on top of all your emails, appointments, to-dos, and news with Mail, Calendar, Tasks, and Feed Reader. (Compatible with IMAP, POP3, CalDAV, and Atom/RSS.)</li>
+      <li>Jot down ideas and inspiration with the integrated Notes manager.</li>
+      <li>End-to-end encrypted (E2EE) sync of bookmarks, passwords, notes, and more with Vivaldi for desktop, iOS, and Android.</li>
+      <li>Efficient built-in Tracker and Ad Blocker.</li>
+      <li>Compatible with most browser extensions from the Google Chrome Web Store.</li>
+    </ul>
   </description>
   <screenshots>
     <screenshot type="default">
