@@ -4,12 +4,28 @@
   <id>com.vivaldi.Vivaldi</id>
   <launchable type="desktop-id">com.vivaldi.Vivaldi.desktop</launchable>
   <name>Vivaldi</name>
-  <developer_name>Vivaldi</developer_name>
+  <developer_name>Vivaldi Technologies</developer_name>
   <summary>A powerful, personal, and private web browser</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">https://vivaldi.com/</url>
-<description>
+  <url type="help">https://help.vivaldi.com/desktop/</url>
+  <url type="bugtracker">https://help.vivaldi.com/desktop/troubleshoot/reporting-a-bug-in-vivaldi/</url>
+  <keywords>
+    <keyword>web browser</keyword>
+    <keyword>mail client</keyword>
+  </keywords>
+  <categories>
+    <category>Network</category>
+    <category>WebBrowser</category>
+    <category>Email</category>
+    <category>Feed</category>
+    <category>Office</category>
+    <category>Calendar</category>
+    <category>ContactManagement</category>
+    <category>Viewer</category>
+  </categories>
+  <description>
     <p>
       Vivaldi is a feature-packed web browser for techies and people who need a browser that helps them get things done.
       The user interface is fully customizable, including keyboard shortcuts, mouse gestures, and programmable macros.
