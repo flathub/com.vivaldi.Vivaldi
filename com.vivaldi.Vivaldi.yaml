@@ -73,8 +73,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/refi64/zypak
-        tag: v2022.04
-        commit: 55a60d110301e8dd37b631503c3524ab7baaf7aa
+        tag: v2024.01.17
+        commit: ded79a2f8a509adc21834b95a9892073d4a91fdc
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -100,8 +100,8 @@ modules:
         done
     sources:
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_6.5.3206.53-1_amd64.deb
-        sha256: c1a6a8db192e4481f2dfc3baaefca8187f3b168a986c47ed5599444da90bb0b2
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_6.5.3206.55-1_amd64.deb
+        sha256: 12592eb9a65f2bc17a095039c5b2acce46ea75c3c008547ec5dd294719ddebe5
         dest-filename: vivaldi.deb
         only-arches: [x86_64]
         x-checker-data:
@@ -109,8 +109,8 @@ modules:
           url: https://vivaldi.com/download/vivaldi-stable_amd64.deb
           pattern: https://downloads.vivaldi.com/stable/vivaldi-stable_([0-9.]+)-1_amd64.deb
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_6.5.3206.53-1_arm64.deb
-        sha256: 1ca617d58118bd29392fb7030dd5cf559b0bd3649a4cadf18566b5640a0ef253
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_6.5.3206.55-1_arm64.deb
+        sha256: 96bfbdfb0d6f459486ff674fe4ade670a2c24228dc90f76433f2360e08cee308
         dest-filename: vivaldi.deb
         only-arches: [aarch64]
         x-checker-data:
