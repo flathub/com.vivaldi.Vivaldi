@@ -5,7 +5,7 @@
   <launchable type="desktop-id">com.vivaldi.Vivaldi.desktop</launchable>
   <name>Vivaldi</name>
   <developer_name>Vivaldi Technologies</developer_name>
-  <summary>A powerful, personal, and private web browser</summary>
+  <summary>Feature-packed web browser</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">https://vivaldi.com/</url>
@@ -27,20 +27,20 @@
   </categories>
   <description>
     <p>
-      Vivaldi is a feature-packed web browser for techies and people who need a browser that helps them get things done.
+      The web browser for techies and people who need a browser that helps them get things done.
       The user interface is fully customizable, including keyboard shortcuts, mouse gestures, and programmable macros.
     </p>
-    <p>
-      NOTE: This package is not officially endorsed or supported by Vivaldi Technologies.
-    </p>
     <ul>
-      <li>Seize back control of your tab glut with features like Workspaces, Tab Stacks, and Tab Tiling.</li>
+      <li>Seize back control of your tabs with features like Workspaces, Tab Stacks, and Tab Tiling.</li>
       <li>Stay on top of all your emails, appointments, to-dos, and news with Mail, Calendar, Tasks, and Feed Reader. (Compatible with IMAP, POP3, CalDAV, and Atom/RSS.)</li>
       <li>Jot down ideas and inspiration with the integrated Notes manager.</li>
       <li>End-to-end encrypted (E2EE) sync of bookmarks, passwords, notes, and more with Vivaldi for desktop, iOS, and Android.</li>
       <li>Efficient built-in Tracker and Ad Blocker.</li>
       <li>Compatible with most browser extensions from the Google Chrome Web Store.</li>
     </ul>
+    <p>
+      NOTE: This package is maintained by but not yet officially endorsed or supported by Vivaldi Technologies.
+    </p>
   </description>
   <screenshots>
     <screenshot type="default">
@@ -48,6 +48,8 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="6.5.3206.61" date="2024-02-07"/>
+    <release version="6.5.3206.59" date="2024-01-31"/>
     <release version="6.5.3206.57" date="2024-01-24"/>
     <release version="6.5.3206.55" date="2024-01-17"/>
     <release version="6.5.3206.53" date="2024-01-10"/>
