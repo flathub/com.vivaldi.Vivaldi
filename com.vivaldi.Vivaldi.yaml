@@ -41,7 +41,8 @@ finish-args:
   - --talk-name=org.freedesktop.ScreenSaver
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.gnome.SessionManager
-  - --talk-name=org.kde.kwalletd5 # Used for password encryption under KDE environments
+  - --talk-name=org.kde.kwalletd5 # Used for password encryption under KDE5 environments
+  - --talk-name=org.kde.kwalletd6 # Used for password encryption under KDE6 environments
 
 modules:
   - name: dconf
