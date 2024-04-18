@@ -6,6 +6,10 @@
   <name>Vivaldi</name>
   <developer_name>Vivaldi Technologies</developer_name>
   <summary>Feature-packed web browser</summary>
+  <summary xml:lang="de">Funktionsreicher Webbrowser</summary>
+  <summary xml:lang="es">Navegador web cargado de funcionalidadsummary>
+  <summary xml:lang="fr">Un navigateur Web riche en fonctionnalités</summary>
+  <summary xml:lang="ru">Полнофункциональный веб-браузер</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">https://vivaldi.com/</url>
@@ -40,6 +44,74 @@
     </ul>
     <p>
       NOTE: This package is maintained by but not yet officially endorsed or supported by Vivaldi Technologies.
+    </p>
+  </description>
+  <description xml:lang="de">
+    <p>
+      Der Webbrowser für Technikbegeisterte und Menschen, die einen Browser brauchen, der ihnen hilft, Dinge zu erledigen.
+      Die Benutzeroberfläche ist vollständig anpassbar, einschließlich Tastaturkürzeln, Mausgesten und programmierbaren Makros.
+    </p>
+    <ul>
+      <li>Übernehmen Sie die Kontrolle über Ihre Tabs mit Funktionen wie Arbeitsbereichen (Workspaces), Tab-Gruppen und Tab-Kacheln.</li>
+      <li>Mit Mail, Kalender, Aufgaben und Feed Reader behalten Sie den Überblick über alle Ihre E-Mails, Termine, Aufgaben und Nachrichten. (Compatible with IMAP, POP3, CalDAV, and Atom/RSS.)</li>
+      <li>Mit dem integrierten Notizen-Manager notieren Sie Ideen und Inspirationen.</li>
+      <li>Ende-zu-Ende-verschlüsselte (E2EE) Synchronisierung von Lesezeichen, Passwörtern, Notizen und mehr mit Vivaldi für Desktop, iOS und Android.</li>
+      <li>Effizienter integrierter Tracker- und Werbeblocker.</li>
+      <li>Mit den meisten Browsererweiterungen aus dem Google Chrome Web Store kompatibel.</li>
+    </ul>
+    <p>
+      HINWEIS: Dieses Paket wird von Vivaldi Technologies gewartet, aber noch nicht offiziell unterstützt oder befürwortet.
+    </p>
+  </description>
+  <description xml:lang="es">
+    <p>
+     El navegador web para los que buscan “algo más”.
+     Personaliza la interfaz de usuario como más te guste, incluyendo atajos de teclado, gestos de ratón y macros programables.
+    </p>
+    <ul>
+     <li>Toma el control de tus pestañas con los espacios de trabajo, las pilas de pestañas y la vista en mosaico.</li>
+     <li>Mantente al tanto de las últimas noticias y gestiona tus correos, eventos y tareas pendientes con nuestra funcionalidad integrada: correo, calendario, lista de tareas y lector de fuentes. (Compatibles con IMAP, POP3, CalDAV y Atom/RSS.)</li>
+     <li>Anota todas tus ideas en el gestor de notas integrado.</li>
+     <li>Sincronización cifrada de marcadores, contraseñas, notas, y más entre Vivaldi para escritorio, iOS y Android.</li>
+     <li>Eficiente bloqueador de rastreadores y anuncios.</li>
+     <li>Compatible con la mayoría de extensiones de la Google Chrome Web Store.</li>
+    </ul>
+    <p>
+     IMPORTANTE: Este paquete está mantenido por un empleado de Vivaldi, pero Vivaldi Technologies aún no ofrece soporte oficial.
+    </p>
+  </description>
+  <description xml:lang="fr">
+    <p>
+      Le navigateur Web pour les geeks et ceux qui veulent un navigateur performant qui les aide efficacement au quotidien.
+      L'interface utilisateur, les raccourcis au clavier et à la souris sont complètement personnalisables ; il est même possible de programmer des enchainements de commandes.
+    </p>
+    <ul>
+      <li>Reprenez le contrôle de vos onglets grâce à des fonctionnalités comme les espaces de travail, les empilements et la juxtaposition d'onglets.</li>
+      <li>Gérez tous vos mails, vos rendez-vous, votre liste de tâches et restez informés grâce au client mail, au gestionnaire d'agendas et à l'agrégateur de flux (respectivement aux standards IMAP, POP3, SMTP, CalDAV et Atom/RSS.)</li>
+      <li>Conservez des traces de vos idées et de vos sources d'inspiration avec le gestionnaire de notes intégré.</li>
+      <li>Synchronisez, avec un chiffrement de bout en bout, tous vos signets, vos mots de passe, vos notes et vos autres données, entre toutes vos installations de Vivaldi (sur ordinateurs, iOS et Android).</li>
+      <li>Bloquez efficacement les publicités et les traqueurs.</li>
+      <li>Profitez, si besoin, de la plupart des extensions disponibles sur le Google Chrome Web Store.</li>
+    </ul>
+    <p>
+      NOTE : Ce paquet est maintenu, mais n'est pas encore officiellement approuvé et supporté par Vivaldi Technologies.
+    </p>
+  </description>
+  <description xml:lang="ru">
+    <p>
+      Веб-браузер для тех, кому нужен браузер, позволяющий выполнять все поставленные задачи.
+      Полностью настраиваемый интерфейс, включая комбинации клавиш, жесты мышью и программируемые макросы.
+    </p>
+    <ul>
+      <li>Верните себе контроль над вкладками с такими функциями, как рабочие пространства, группировка вкладок и размещение вкладок в одном окне.</li>
+      <li>Держите под рукой вашу почту, встречи, задачи и новости с помощью почтового и новостного клиентов, календаря и менеджера задач. (Поддерживаются IMAP, POP3, CalDAV и Atom/RSS.)</li>
+      <li>Сохраняйте идеи и полезную информацию с помощью встроенного менеджера заметок.</li>
+      <li>Используйте защищённую сквозным шифрованием (E2EE) синхронизацию закладок, паролей, заметок и многого другого с Vivaldi на ПК, iOS и Android.</li>
+      <li>Мощный встроенный блокировщик слежки и рекламы.</li>
+      <li>Поддерживает большинство расширений из Google Chrome Web Store.</li>
+    </ul>
+    <p>
+      ПРИМЕЧАНИЕ: Этот пакет подготовлен разработчиками Vivaldi Technologies, но пока не имеет статуса официальной поддержки.
     </p>
   </description>
   <screenshots>
