@@ -41,7 +41,8 @@ finish-args:
   - --talk-name=org.freedesktop.ScreenSaver
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.gnome.SessionManager
-  - --talk-name=org.kde.kwalletd5 # Used for password encryption under KDE environments
+  - --talk-name=org.kde.kwalletd5 # Used for password encryption under KDE5 environments
+  - --talk-name=org.kde.kwalletd6 # Used for password encryption under KDE6 environments
 
 modules:
   - name: dconf
@@ -100,8 +101,8 @@ modules:
         done
     sources:
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_6.5.3206.61-1_amd64.deb
-        sha256: 46fca558b37cb0f0f243cc6c252a7c47f4594cedb4bbdf5c0450e2f499bb98c0
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_6.6.3271.61-1_amd64.deb
+        sha256: 5ede292c1db7559fe3f60fd008e413aeb85076ec6cd67078c3262405e7c53c84
         dest-filename: vivaldi.deb
         only-arches: [x86_64]
         x-checker-data:
@@ -109,8 +110,8 @@ modules:
           url: https://vivaldi.com/download/vivaldi-stable_amd64.deb
           pattern: https://downloads.vivaldi.com/stable/vivaldi-stable_([0-9.]+)-1_amd64.deb
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_6.5.3206.61-1_arm64.deb
-        sha256: a6bb8b9d00a9af1392ec694d9384558db154cecd07a696a2d4be85cf1bf28ca5
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_6.6.3271.61-1_arm64.deb
+        sha256: 45c73fa6e7c834e409964408e8a916559b678772af28b4ba8d1590353c4f1665
         dest-filename: vivaldi.deb
         only-arches: [aarch64]
         x-checker-data:
