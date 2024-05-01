@@ -44,10 +44,39 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://vivaldi.com/wp-content/themes/vivaldicom-theme/img/home/desktop/large-hero.png</image>
+      <image>https://vivaldi.com/wp-content/uploads/Flatpak_general.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://vivaldi.com/wp-content/uploads/Flatpak_dark_mode.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://vivaldi.com/wp-content/uploads/Flatpak_webpanel.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://vivaldi.com/wp-content/uploads/Flatpak_tab_stack.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://vivaldi.com/wp-content/uploads/Flatpak_mail.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://vivaldi.com/wp-content/uploads/Flatpak_calendar.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://vivaldi.com/wp-content/uploads/Flatpak_workspace.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://vivaldi.com/wp-content/uploads/Flatpak_private_window.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://vivaldi.com/wp-content/uploads/Flatpak_privacy_stats.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://vivaldi.com/wp-content/uploads/Flatpak_sync.png</image>
     </screenshot>
   </screenshots>
   <releases>
+    <release version="6.7.3329.21" date="2024-04-29"/>
+    <release version="6.7.3329.17" date="2024-04-25"/>
     <release version="6.6.3271.61" date="2024-04-12"/>
     <release version="6.6.3271.57" date="2024-04-04"/>
     <release version="6.6.3271.55" date="2024-03-27"/>
