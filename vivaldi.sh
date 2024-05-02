@@ -14,7 +14,7 @@ case $(uname -m) in
         nohup sh -c "sleep 10; \"/app/vivaldi/update-ffmpeg\" --user" > /dev/null 2>&1 &
       else
         echo "'Proprietary media' support is not installed. Attempting to fix this now." >&2
-        timeout 3s "/app/vivaldi/update-ffmpeg" --user
+        timeout 3s "/app/vivaldi/update-ffmpeg" --user 2> /dev/null
         if [ -e "$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION/libffmpeg.so" ]; then
           export ZYPAK_LD_PRELOAD="$ZYPAK_LD_PRELOAD${ZYPAK_LD_PRELOAD:+:}$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION/libffmpeg.so"
         else
