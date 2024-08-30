@@ -70,16 +70,6 @@ modules:
       - type: patch
         path: dconf-override.patch
 
-  - name: zypak
-    sources:
-      - type: git
-        url: https://github.com/refi64/zypak
-        tag: v2024.01.17
-        commit: ded79a2f8a509adc21834b95a9892073d4a91fdc
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
-
   - name: vivaldi
     buildsystem: simple
     build-commands:
@@ -101,8 +91,8 @@ modules:
         done
     sources:
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_6.8.3381.57-1_amd64.deb
-        sha256: 3c2e5fccc4480b66d6f3198f086da7348c30cf4c216baf950cb015d6285b4243
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_6.9.3447.37-1_amd64.deb
+        sha256: fa1ed21dc8bc819f9ea4a1470f43e25f2304db14fe9680f6297a4918509f2058
         dest-filename: vivaldi.deb
         only-arches: [x86_64]
         x-checker-data:
@@ -110,8 +100,8 @@ modules:
           url: https://vivaldi.com/download/vivaldi-stable_amd64.deb
           pattern: https://downloads.vivaldi.com/stable/vivaldi-stable_([0-9.]+)-1_amd64.deb
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_6.8.3381.57-1_arm64.deb
-        sha256: 4de85cf53f7eecd1da318bbb97ba81ff4f62a6ce35ad3c7554309a954c8ee8dc
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_6.9.3447.37-1_arm64.deb
+        sha256: 9184e759a77f8eb26df73f808635f31d8c55488c0820edd1283eeccee3c4836b
         dest-filename: vivaldi.deb
         only-arches: [aarch64]
         x-checker-data:

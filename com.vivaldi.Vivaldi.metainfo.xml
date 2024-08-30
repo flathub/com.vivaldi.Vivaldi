@@ -75,18 +75,11 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="6.8.3381.57" date="2024-08-24">
-      <description></description>
-    </release>
-    <release version="6.8.3381.55" date="2024-08-21">
-      <description/>
-    </release>
-    <release version="6.8.3381.53" date="2024-08-08">
-      <description/>
-    </release>
-    <release version="6.8.3381.50" date="2024-07-31">
-      <description/>
-    </release>
+    <release version="6.9.3447.37" date="2024-08-29"/>
+    <release version="6.8.3381.57" date="2024-08-24"/>
+    <release version="6.8.3381.55" date="2024-08-21"/>
+    <release version="6.8.3381.53" date="2024-08-08"/>
+    <release version="6.8.3381.50" date="2024-07-31"/>
     <release version="6.8.3381.48" date="2024-07-18"/>
     <release version="6.8.3381.46" date="2024-06-25"/>
     <release version="6.8.3381.44" date="2024-06-20"/>
