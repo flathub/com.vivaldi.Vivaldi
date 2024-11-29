@@ -24,4 +24,4 @@ fi
 
 [ "$(uname -m)" = "aarch64" ] && export LIBGL_DRIVERS_PATH=/usr/lib/aarch64-linux-gnu/GL/lib/dri
 
-exec cobalt "$@" --no-default-browser-check
+exec cobalt "$@" --class=Vivaldi-flatpak --no-default-browser-check

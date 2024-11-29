@@ -80,7 +80,7 @@ modules:
       - mv /app/vivaldi/vivaldi-bin /app/vivaldi/vivaldi
       - sed -i 's,HOME/.local/lib/vivaldi,XDG_DATA_HOME/vivaldi-extra-libs,' /app/vivaldi/update-ffmpeg # Change 3rd party directory lib is downloaded/stored to work with flatpak
       - sed -i 's,^Exec=.*vivaldi-stable,Exec=vivaldi,;s,^Icon=vivaldi,Icon=com.vivaldi.Vivaldi,;/^StartupNotify/
-        i StartupWMClass=Vivaldi-stable' /app/vivaldi/applications/vivaldi-stable.desktop
+        i StartupWMClass=Vivaldi-flatpak' /app/vivaldi/applications/vivaldi-stable.desktop
       - install -Dm 644 /app/vivaldi/applications/vivaldi-stable.desktop /app/share/applications/com.vivaldi.Vivaldi.desktop
       - install -Dm 755 vivaldi.sh /app/bin/vivaldi
       - install -Dm 644 -t /app/etc cobalt.ini
