@@ -1,9 +1,15 @@
 #!/usr/bin/bash
 
-FFMPEG_VERSION=115541
-if [ -e "$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION/libffmpeg.so" ]; then
-  export LD_PRELOAD="$LD_PRELOAD${LD_PRELOAD:+:}$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION/libffmpeg.so"
-else
+FFMPEG_VERSION=118356 # Chromium 131
+FFMPEG_FOUND=NO
+for FFMPEG_VERSION_CANDIDATE in 115541 "$FFMPEG_VERSION"; do
+  if [ -e "$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION_CANDIDATE/libffmpeg.so" ]; then
+    export LD_PRELOAD="$LD_PRELOAD${LD_PRELOAD:+:}$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION_CANDIDATE/libffmpeg.so"
+    FFMPEG_FOUND=YES
+    break
+  fi
+done
+if [ "$FFMPEG_FOUND" = NO ]; then
   if [ -e "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-$FFMPEG_VERSION" ]; then
     echo "'Proprietary media' support is not installed. Attempting to fix this for the next restart." >&2
     export VIVALDI_FFMPEG_FUTURE_PATH="$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION/libffmpeg.so"
