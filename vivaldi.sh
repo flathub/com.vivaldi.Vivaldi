@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 FFMPEG_VERSION=118356 # Chromium 131
-FMPEG_FOUND=NO
+FFMPEG_FOUND=NO
 for FFMPEG_VERSION_CANDIDATE in 115541 "$FFMPEG_VERSION"; do
   if [ -e "$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION_CANDIDATE/libffmpeg.so" ]; then
     export LD_PRELOAD="$LD_PRELOAD${LD_PRELOAD:+:}$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION_CANDIDATE/libffmpeg.so"
