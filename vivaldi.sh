@@ -30,9 +30,6 @@ fi
 
 if [ "$(uname -m)" = "aarch64" ]; then
   export LIBGL_DRIVERS_PATH=/usr/lib/aarch64-linux-gnu/GL/lib/dri
-  # Temp workaround for VB-113321 (Vivaldi 7.1 crashes at start on arm64 with SELinux)
-  # See also: https://issues.chromium.org/issues/378017037
-  VIVALDI_JS_FLAGS='--js-flags=--nodecommit_pooled_pages'
 fi
 
-exec cobalt "$@" --class=Vivaldi-flatpak --no-default-browser-check "${VIVALDI_JS_FLAGS:-}"
+exec cobalt "$@" --class=Vivaldi-flatpak --no-default-browser-check
