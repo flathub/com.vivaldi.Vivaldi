@@ -60,7 +60,8 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="7.1.3570.60" date="2025-05-09"/>
+    <release version="7.2.3621.63" date="2025-03-18"/>
+    <release version="7.1.3570.60" date="2025-03-10"/>
     <release version="7.1.3570.58" date="2025-02-27"/>
     <release version="7.1.3570.54" date="2025-02-19"/>
     <release version="7.1.3570.50" date="2025-02-12"/>
