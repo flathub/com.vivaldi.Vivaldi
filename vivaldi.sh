@@ -1,8 +1,11 @@
 #!/usr/bin/bash
 
-FFMPEG_VERSION=118356 # Chromium 131
+VIVALDI_VERSION_SHORT=7.4
+FFMPEG_VERSIONS="119605 119293 118356 115541"
 FFMPEG_FOUND=NO
-for FFMPEG_VERSION_CANDIDATE in 115541 "$FFMPEG_VERSION"; do
+unset VIVALDI_FFMPEG_FUTURE_PATH
+
+for FFMPEG_VERSION_CANDIDATE in $FFMPEG_VERSIONS; do
   if [ -e "$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION_CANDIDATE/libffmpeg.so" ]; then
     export LD_PRELOAD="$LD_PRELOAD${LD_PRELOAD:+:}$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION_CANDIDATE/libffmpeg.so"
     FFMPEG_FOUND=YES
@@ -10,21 +13,23 @@ for FFMPEG_VERSION_CANDIDATE in 115541 "$FFMPEG_VERSION"; do
   fi
 done
 if [ "$FFMPEG_FOUND" = NO ]; then
-  if [ -e "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-$FFMPEG_VERSION" ]; then
+  if [ -e "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-$VIVALDI_VERSION_SHORT" ]; then
     echo "'Proprietary media' support is not installed. Attempting to fix this for the next restart." >&2
-    export VIVALDI_FFMPEG_FUTURE_PATH="$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION/libffmpeg.so"
+    export VIVALDI_FFMPEG_FUTURE_PATH="$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$VIVALDI_VERSION_SHORT/libffmpeg.so"
     nohup sh -c "sleep 10; /app/vivaldi/update-ffmpeg --user" > /dev/null 2>&1 &
   else
+    rm -f "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-"*
     echo "'Proprietary media' support is not installed. Attempting to fix this now." >&2
     timeout 3s /app/vivaldi/update-ffmpeg --user 2> /dev/null
-    if [ -e "$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION/libffmpeg.so" ]; then
-      export LD_PRELOAD="$LD_PRELOAD${LD_PRELOAD:+:}$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION/libffmpeg.so"
+    if [ -e "$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$VIVALDI_VERSION_SHORT/libffmpeg.so" ]; then
+      export LD_PRELOAD="$LD_PRELOAD${LD_PRELOAD:+:}$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$VIVALDI_VERSION_SHORT/libffmpeg.so"
     else
-      export VIVALDI_FFMPEG_FUTURE_PATH="$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION/libffmpeg.so"
+      export VIVALDI_FFMPEG_FUTURE_PATH="$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$VIVALDI_VERSION_SHORT/libffmpeg.so"
       nohup sh -c "sleep 7; /app/vivaldi/update-ffmpeg --user" > /dev/null 2>&1 &
     fi
     rm -f "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-"*
-    touch "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-$FFMPEG_VERSION"
+    mkdir -p "$XDG_DATA_HOME"
+    touch "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-$VIVALDI_VERSION_SHORT"
   fi
 fi
 
