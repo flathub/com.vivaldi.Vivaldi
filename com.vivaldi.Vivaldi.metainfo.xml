@@ -37,6 +37,7 @@
       <li>End-to-end encrypted (E2EE) sync of bookmarks, passwords, notes, and more with Vivaldi for desktop, iOS, and Android.</li>
       <li>Efficient built-in Tracker and Ad Blocker.</li>
       <li>Compatible with most browser extensions from the Google Chrome Web Store.</li>
+      <li>Proton VPN.</li>
     </ul>
     <p>
       NOTE: This package is maintained by but not yet officially endorsed or supported by Vivaldi Technologies.
@@ -60,6 +61,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="7.4.3684.29" date="2025-05-15"/>
     <release version="7.3.3635.12" date="2025-05-05"/>
     <release version="7.3.3635.11" date="2025-04-16"/>
     <release version="7.3.3635.9" date="2025-04-09"/>
