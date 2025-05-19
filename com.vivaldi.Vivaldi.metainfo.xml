@@ -36,6 +36,7 @@
       <li>Jot down ideas and inspiration with the integrated Notes manager.</li>
       <li>End-to-end encrypted (E2EE) sync of bookmarks, passwords, notes, and more with Vivaldi for desktop, iOS, and Android.</li>
       <li>Efficient built-in Tracker and Ad Blocker.</li>
+      <li>Pronton VPN.</li>
       <li>Compatible with most browser extensions from the Google Chrome Web Store.</li>
     </ul>
     <p>
@@ -60,6 +61,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="7.4.3684.38" date="2025-05-19"/>
     <release version="7.3.3635.14" date="2025-05-15"/>
     <release version="7.3.3635.12" date="2025-05-05"/>
     <release version="7.3.3635.11" date="2025-04-16"/>
