@@ -22,7 +22,7 @@ finish-args:
   - --filesystem=xdg-run/pipewire-0
   - --filesystem=~/.config/dconf:ro # For GNOME proxy resolution
   - --filesystem=~/.config/kioslaverc # For KDE proxy resolution (KDE5 only)
-  - --own-name=org.mpris.MediaPlayer2.chromium.* # Like the Opera flatpack (on flathub) this is still hardcoded to Chromium :(
+  - --own-name=org.mpris.MediaPlayer2.vivaldi.*
   - --persist=.pki
   - --require-version=1.8.2
   - --share=ipc
@@ -91,8 +91,8 @@ modules:
         done
     sources:
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_7.4.3684.55-1_amd64.deb
-        sha256: 71712915ae362eaec18593361fb0b07c92894f392141f090d22e1d6cf45f760f
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_7.5.3735.41-1_amd64.deb
+        sha256: 7f7bc20b5f0cc192c4a9730cebded790cbc0908d07e2af096e317dc6bab1368f
         dest-filename: vivaldi.deb
         only-arches: [x86_64]
         x-checker-data:
@@ -100,8 +100,8 @@ modules:
           url: https://vivaldi.com/download/vivaldi-stable_amd64.deb
           pattern: https://downloads.vivaldi.com/stable/vivaldi-stable_([0-9.]+)-1_amd64.deb
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_7.4.3684.55-1_arm64.deb
-        sha256: 9d9195980b440459b7f842ef47cffb4d097f5a19df3cb0d22aaae149bc1db120
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_7.5.3735.41-1_arm64.deb
+        sha256: 92125e0545c24dac95ff9d3efde16fed703f2dc2249907771ecb57da8453e514
         dest-filename: vivaldi.deb
         only-arches: [aarch64]
         x-checker-data:
