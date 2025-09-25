@@ -37,4 +37,25 @@ if [ "$(uname -m)" = "aarch64" ]; then
   export LIBGL_DRIVERS_PATH=/usr/lib/aarch64-linux-gnu/GL/lib/dri
 fi
 
+# Detect distro and distro version and export as $DISTRO_NAME $DISTRO_VERSION_NUMBER
+
+# Cleanup in case the user exported these variable names already (since they are quite generic in their naming)
+unset ID
+unset VERSION_ID
+
+# Source the system file os-release, which should correctly set $ID and $VERSION_ID
+if [ -r /etc/os-release ]; then
+  . /etc/os-release
+elif [ -r /usr/lib/os-release ]; then
+  . /usr/lib/os-release
+fi
+
+# In cases where $ID and $VERSION_ID are not set provide sensible defaults
+[ -z "${ID:-}" ] && ID=linux
+[ -z "${VERSION_ID:-}" ] && VERSION_ID="$(uname -r | tr -cd '[:alnum:]._-')"
+
+# Export these values with less generic names
+export VIVALDI_DISTRO_NAME="$ID"
+export VIVALDI_DISTRO_VERSION_NUMBER="$VERSION_ID"
+
 exec cobalt "$@" --class=Vivaldi-flatpak --no-default-browser-check
