@@ -48,12 +48,26 @@ elif [ -r /usr/lib/os-release ]; then
   OS_RELEASE_FILE="/usr/lib/os-release"
 fi
 
-## Parse os-release line by line because sourcing it is problematic on some distros
+## Parse os-release line by line because sourcing it directly is problematic on some distros
 if [ -n "$OS_RELEASE_FILE" ]; then
-  while IFS='=' read -r key value; do
-    case "$key" in
-      ID) ID="${value%\"}"; ID="${ID#\"}" ;;
-      VERSION_ID) VERSION_ID="${value%\"}"; VERSION_ID="${VERSION_ID#\"}" ;;
+  while IFS='=' read -r osreleasekey osreleasevalue; do
+    case "$osreleasekey" in
+      ''|'#'*)
+        continue
+        ;;
+      ID)
+        # Strip any quoting of variables
+        ID="${osreleasevalue%\"}"
+        ID="${ID#\"}"
+        ID="${ID%\'}"
+        ID="${ID#\'}"
+        ;;
+      VERSION_ID)
+        VERSION_ID="${osreleasevalue%\"}"
+        VERSION_ID="${VERSION_ID#\"}"
+        VERSION_ID="${VERSION_ID%\'}"
+        VERSION_ID="${VERSION_ID#\'}"
+        ;;
     esac
   done < "$OS_RELEASE_FILE"
 fi
