@@ -38,23 +38,31 @@ if [ "$(uname -m)" = "aarch64" ]; then
 fi
 
 # Detect distro and distro version and export as $DISTRO_NAME $DISTRO_VERSION_NUMBER
-
-# Cleanup in case the user exported these variable names already (since they are quite generic in their naming)
-unset ID
-unset VERSION_ID
-
-# Source the system file os-release, which should correctly set $ID and $VERSION_ID
+## Check that /etc/os-release or fallback /usr/lib/os-release are present and readable
+ID=''
+VERSION_ID=''
+OS_RELEASE_FILE=''
 if [ -r /etc/os-release ]; then
-  . /etc/os-release
+  OS_RELEASE_FILE="/etc/os-release"
 elif [ -r /usr/lib/os-release ]; then
-  . /usr/lib/os-release
+  OS_RELEASE_FILE="/usr/lib/os-release"
 fi
 
-# In cases where $ID and $VERSION_ID are not set provide sensible defaults
-[ -z "${ID:-}" ] && ID=linux
-[ -z "${VERSION_ID:-}" ] && VERSION_ID="$(uname -r | tr -cd '[:alnum:]._-')"
+## Parse os-release line by line because sourcing it is problematic on some distros
+if [ -n "$OS_RELEASE_FILE" ]; then
+  while IFS='=' read -r key value; do
+    case "$key" in
+      ID) ID="${value%\"}"; ID="${ID#\"}" ;;
+      VERSION_ID) VERSION_ID="${value%\"}"; VERSION_ID="${VERSION_ID#\"}" ;;
+    esac
+  done < "$OS_RELEASE_FILE"
+fi
 
-# Export these values with less generic names
+## In cases where $ID and $VERSION_ID are not set provide sensible defaults
+[ -z "${ID:-}" ] && ID=linux
+[ -z "${VERSION_ID:-}" ] && VERSION_ID="$(uname -r | tr -cd 'A-Za-z0-9._-' | tr 'A-Z' 'a-z')"
+
+## Export these values with less generic names
 export VIVALDI_DISTRO_NAME="$ID"
 export VIVALDI_DISTRO_VERSION_NUMBER="$VERSION_ID"
 
