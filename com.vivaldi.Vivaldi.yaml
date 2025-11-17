@@ -91,8 +91,8 @@ modules:
         done
     sources:
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_7.7.3851.48-1_amd64.deb
-        sha256: f70f801c26665a42fd7d260835a38561da778f6d2559850152a77d422cf24498
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_7.7.3851.52-1_amd64.deb
+        sha256: 75f28318f0a48dbc394b2c505f0a256e36e6f95017b0b9ce9423125687b11657
         dest-filename: vivaldi.deb
         only-arches: [x86_64]
         x-checker-data:
@@ -100,8 +100,8 @@ modules:
           url: https://vivaldi.com/download/vivaldi-stable_amd64.deb
           pattern: https://downloads.vivaldi.com/stable/vivaldi-stable_([0-9.]+)-1_amd64.deb
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_7.7.3851.48-1_arm64.deb
-        sha256: 5b2bee617b96336e9e05fd00b2dea6cb006443fc58d58cf1c96bad5f23a0a76f
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_7.7.3851.52-1_arm64.deb
+        sha256: b4a0457b930178e492e66902e7b7cc27e1201a98fdb16d7de923ce1883600de3
         dest-filename: vivaldi.deb
         only-arches: [aarch64]
         x-checker-data:
