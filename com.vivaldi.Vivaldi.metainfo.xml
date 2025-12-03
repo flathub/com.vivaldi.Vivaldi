@@ -46,21 +46,27 @@
   <screenshots>
     <screenshot type="default">
       <image>https://vivaldi.com/wp-content/uploads/Vivaldi_7-1.png</image>
+      <caption>Vivaldi browser displaying the customizable Dashboard start page with widgets for date, tasks, news, travel, and notes.</caption>
     </screenshot>
     <screenshot>
       <image>https://vivaldi.com/wp-content/uploads/Feed-Folder.png</image>
+      <caption>Vivaldi browser displaying its integrated RSS/Atom feed reader with folders, message previews, and article content.</caption>
     </screenshot>
     <screenshot>
       <image>https://vivaldi.com/wp-content/uploads/1920w_New-themes_Human.png</image>
+      <caption>Vivaldi browser start page with dark theme and orange accents, styled to match classic Ubuntu colors.</caption>
     </screenshot>
     <screenshot>
       <image>https://vivaldi.com/wp-content/uploads/1920w_New-themes_Soft-Pink.png</image>
+      <caption>Vivaldi browser start page with a pastel lilac theme, featuring the speed dial with integrated search.</caption>
     </screenshot>
     <screenshot>
       <image>https://vivaldi.com/wp-content/uploads/1920w_New-default-theme_Settings.png</image>
+      <caption>Vivaldi browser settings page showing bundled themes, with options to install or customize additional themes.</caption>
     </screenshot>
   </screenshots>
   <releases>
+    <release version="7.7.3851.58" date="2025-12-03"/>
     <release version="7.7.3851.56" date="2025-11-28"/>
     <release version="7.7.3851.54" date="2025-11-26"/>
     <release version="7.7.3851.52" date="2025-11-17"/>
