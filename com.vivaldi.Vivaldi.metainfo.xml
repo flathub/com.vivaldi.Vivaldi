@@ -66,6 +66,9 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="7.8.3925.66-1" date="2026-02-13">
+      <description></description>
+    </release>
     <release version="7.8.3925.62" date="2026-02-04"/>
     <release version="7.8.3925.56" date="2026-01-29"/>
     <release version="7.7.3851.67" date="2026-01-07"/>
