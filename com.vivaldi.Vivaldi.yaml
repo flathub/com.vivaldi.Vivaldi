@@ -91,7 +91,7 @@ modules:
         done
     sources:
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_7.8.3925.60-1_amd64.deb
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_7.8.3925.70-1_amd64.deb
         sha256: 05d7fa0fd2644c493ca1a79460f12cf22c48e7332c93dcc91244b8e4a6cca9fd
         dest-filename: vivaldi.deb
         only-arches: [x86_64]
