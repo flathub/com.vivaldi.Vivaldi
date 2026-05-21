@@ -45,24 +45,24 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://vivaldi.com/wp-content/uploads/Vivaldi_7-1.png</image>
-      <caption>Customizable Dashboard start page with widgets for date, tasks, news, travel, and notes.</caption>
+      <image>https://vivaldi.com/wp-content/uploads/8.0_desktop_unified_theme_3-1.png</image>
+      <caption>The Vivaldi browser with a unified that has a background image that shows a forest and mountains at night, and a large moon. This image covers the whole UI.</caption>
     </screenshot>
     <screenshot>
-      <image>https://vivaldi.com/wp-content/uploads/Feed-Folder.png</image>
-      <caption>Integrated RSS/Atom feed reader with folders, message previews, and article content.</caption>
+      <image>https://vivaldi.com/wp-content/uploads/8.0_desktop_unified_theme_2-1.png</image>
+      <caption>The Vivaldi browser with a unified that has a background image that shows a person with a hiking stick and a backpack overlooking foggy heath land.</caption>
     </screenshot>
     <screenshot>
-      <image>https://vivaldi.com/wp-content/uploads/1920w_New-themes_Human.png</image>
-      <caption>Theme with dark browns and orange accents, styled to match classic Ubuntu colors.</caption>
+      <image>https://vivaldi.com/wp-content/uploads/8.0_desktop_combined_site_pref-1.png</image>
+      <caption>Zoomed up on the address field and combined site info drop down of the Vivaldi Browser, showing the security and site blocking options. </caption>
     </screenshot>
     <screenshot>
-      <image>https://vivaldi.com/wp-content/uploads/1920w_New-themes_Soft-Pink.png</image>
-      <caption>Start page with a pastel lilac theme, featuring the speed dial with integrated search.</caption>
+      <image>https://vivaldi.com/wp-content/uploads/8.0_desktop_panel_editor-1.png</image>
+      <caption>The panel editor for the Vivaldi browser, showing a range of customisation options.</caption>
     </screenshot>
     <screenshot>
-      <image>https://vivaldi.com/wp-content/uploads/1920w_New-default-theme_Settings.png</image>
-      <caption>Settings page showing bundled themes, with options to install or customize additional themes.</caption>
+      <image>https://vivaldi.com/wp-content/uploads/8.0_desktop_layouts_settings-1.png</image>
+      <caption>The settings page for Vivaldi browser with the various redefined layouts shown.</caption>
     </screenshot>
   </screenshots>
   <releases>
