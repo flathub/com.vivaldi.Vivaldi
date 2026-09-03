@@ -79,8 +79,7 @@ modules:
         ./usr/share/applications
       - mv /app/vivaldi/vivaldi-bin /app/vivaldi/vivaldi
       - sed -i 's,HOME/.local/lib/vivaldi,XDG_DATA_HOME/vivaldi-extra-libs,' /app/vivaldi/update-ffmpeg # Change 3rd party directory lib is downloaded/stored to work with flatpak
-      - sed -i 's,^Exec=.*vivaldi-stable,Exec=vivaldi,;s,^Icon=vivaldi,Icon=com.vivaldi.Vivaldi,;/^StartupNotify/
-        i StartupWMClass=Vivaldi-flatpak' /app/vivaldi/applications/vivaldi-stable.desktop
+      - sed -i 's,^Exec=.*vivaldi-stable,Exec=vivaldi,;s,^Icon=vivaldi,Icon=com.vivaldi.Vivaldi,;s,^StartupWMClass=[Vv]ivaldi,StartupWMClass=Vivaldi-flatpak,' /app/vivaldi/applications/vivaldi-stable.desktop
       - install -Dm 644 /app/vivaldi/applications/vivaldi-stable.desktop /app/share/applications/com.vivaldi.Vivaldi.desktop
       - install -Dm 755 vivaldi.sh /app/bin/vivaldi
       - install -Dm 644 -t /app/etc cobalt.ini
@@ -91,8 +90,8 @@ modules:
         done
     sources:
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_8.1.4087.75-1_amd64.deb
-        sha256: 9cb7cd076481dd9ecf4348115db7a0434243e911e27b611575092e34b2d4899c
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_8.2.4133.45-1_amd64.deb
+        sha256: ece42fd5ce6d17249dd9fc0e08995796f94e9c8079c20df6948d86d5ca8c7a70
         dest-filename: vivaldi.deb
         only-arches: [x86_64]
         x-checker-data:
@@ -100,8 +99,8 @@ modules:
           url: https://vivaldi.com/download/vivaldi-stable_amd64.deb
           pattern: https://downloads.vivaldi.com/stable/vivaldi-stable_([0-9.]+)-1_amd64.deb
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_8.1.4087.75-1_arm64.deb
-        sha256: 3321a715b5978db0f94f31f3957c95d50835eddc7f3238cd5910d189eaa4b02c
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_8.2.4133.45-1_arm64.deb
+        sha256: cf9838059f823eab378183bfc5a93038576d4dd2793135980bfb89059ded987e
         dest-filename: vivaldi.deb
         only-arches: [aarch64]
         x-checker-data:
