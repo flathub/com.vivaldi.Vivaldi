@@ -60,8 +60,8 @@ modules:
       - '*.pc'
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/dconf/0.49/dconf-0.49.0.tar.xz
-        sha256: 16a47e49a58156dbb96578e1708325299e4c19eea9be128d5bd12fd0963d6c36
+        url: https://download.gnome.org/sources/dconf/51/dconf-51.0.tar.xz
+        sha256: e65c1b7867f836faad9f9ee04acf5c5a6cae2bbc784833fe093207e0cb590248
         x-checker-data:
           type: gnome
           name: dconf
@@ -79,7 +79,8 @@ modules:
         ./usr/share/applications
       - mv /app/vivaldi/vivaldi-bin /app/vivaldi/vivaldi
       - sed -i 's,HOME/.local/lib/vivaldi,XDG_DATA_HOME/vivaldi-extra-libs,' /app/vivaldi/update-ffmpeg # Change 3rd party directory lib is downloaded/stored to work with flatpak
-      - sed -i 's,^Exec=.*vivaldi-stable,Exec=vivaldi,;s,^Icon=vivaldi,Icon=com.vivaldi.Vivaldi,;s,^StartupWMClass=[Vv]ivaldi,StartupWMClass=Vivaldi-flatpak,' /app/vivaldi/applications/vivaldi-stable.desktop
+      - sed -i 's,^Exec=.*vivaldi-stable,Exec=vivaldi,;s,^Icon=vivaldi,Icon=com.vivaldi.Vivaldi,;s,^StartupWMClass=[Vv]ivaldi,StartupWMClass=Vivaldi-flatpak,'
+        /app/vivaldi/applications/vivaldi-stable.desktop
       - install -Dm 644 /app/vivaldi/applications/vivaldi-stable.desktop /app/share/applications/com.vivaldi.Vivaldi.desktop
       - install -Dm 755 vivaldi.sh /app/bin/vivaldi
       - install -Dm 644 -t /app/etc cobalt.ini
@@ -90,8 +91,8 @@ modules:
         done
     sources:
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_8.2.4133.55-1_amd64.deb
-        sha256: 6bde74aead28470ee63abd49334ee3716fe024d9665f9d842c095a9acd568e83
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_8.2.4133.52-1_amd64.deb
+        sha256: 40e5e935050b4abedd47df28d8038304731bbf0ff7361a97961d6207a8bcad03
         dest-filename: vivaldi.deb
         only-arches: [x86_64]
         x-checker-data:
@@ -99,8 +100,8 @@ modules:
           url: https://vivaldi.com/download/vivaldi-stable_amd64.deb
           pattern: https://downloads.vivaldi.com/stable/vivaldi-stable_([0-9.]+)-1_amd64.deb
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_8.2.4133.55-1_arm64.deb
-        sha256: a0ed12740f0c7978eb635eca187f326023d94bcd03ce0fd1eaee1ecd7f9dd3ad
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_8.2.4133.52-1_arm64.deb
+        sha256: e6ff4308be81f099d9ac5a27880160e5fa4b0f5a233a74fb1c8b781ee4192732
         dest-filename: vivaldi.deb
         only-arches: [aarch64]
         x-checker-data:
