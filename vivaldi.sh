@@ -1,10 +1,17 @@
 #!/usr/bin/bash
 
+# Setup an alternative libffmpeg to handle a wider variety of media
 VIVALDI_VERSION_SHORT=8.2
-FFMPEG_VERSIONS="8.2-152-Z-20260911b 8.2-152-Z-20260901"
+FFMPEG_VERSIONS="8.2-152-Z-20260911b"
 FFMPEG_FOUND=NO
-unset VIVALDI_FFMPEG_FUTURE_PATH
-
+if [ ! -e "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-$VIVALDI_VERSION_SHORT" ]; then
+  # This clears any old versions
+  rm -f "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-"*
+  # This will be very fast if the latest version is already present
+  timeout 3s /app/vivaldi/update-ffmpeg --user 2> /dev/null
+  mkdir -p "$XDG_DATA_HOME"
+  touch "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-$VIVALDI_VERSION_SHORT"
+fi
 for FFMPEG_VERSION_CANDIDATE in $FFMPEG_VERSIONS; do
   if [ -e "$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION_CANDIDATE/libffmpeg.so" ]; then
     export LD_PRELOAD="$LD_PRELOAD${LD_PRELOAD:+:}$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$FFMPEG_VERSION_CANDIDATE/libffmpeg.so"
@@ -12,26 +19,8 @@ for FFMPEG_VERSION_CANDIDATE in $FFMPEG_VERSIONS; do
     break
   fi
 done
-if [ "$FFMPEG_FOUND" = NO ]; then
-  if [ -e "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-$VIVALDI_VERSION_SHORT" ]; then
-    echo "'Proprietary media' support is not installed. Attempting to fix this for the next restart." >&2
-    export VIVALDI_FFMPEG_FUTURE_PATH="$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$VIVALDI_VERSION_SHORT/libffmpeg.so"
-    nohup sh -c "sleep 10; /app/vivaldi/update-ffmpeg --user" > /dev/null 2>&1 &
-  else
-    rm -f "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-"*
-    echo "'Proprietary media' support is not installed. Attempting to fix this now." >&2
-    timeout 3s /app/vivaldi/update-ffmpeg --user 2> /dev/null
-    if [ -e "$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$VIVALDI_VERSION_SHORT/libffmpeg.so" ]; then
-      export LD_PRELOAD="$LD_PRELOAD${LD_PRELOAD:+:}$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$VIVALDI_VERSION_SHORT/libffmpeg.so"
-    else
-      export VIVALDI_FFMPEG_FUTURE_PATH="$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$VIVALDI_VERSION_SHORT/libffmpeg.so"
-      nohup sh -c "sleep 7; /app/vivaldi/update-ffmpeg --user" > /dev/null 2>&1 &
-    fi
-    rm -f "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-"*
-    mkdir -p "$XDG_DATA_HOME"
-    touch "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-$VIVALDI_VERSION_SHORT"
-  fi
-fi
+# Prepare alternative libffmpeg for next restart
+[ "$FFMPEG_FOUND" = NO ] && nohup /app/vivaldi/update-ffmpeg --user >/dev/null 2>&1 &
 
 if [ "$(uname -m)" = "aarch64" ]; then
   export LIBGL_DRIVERS_PATH=/usr/lib/aarch64-linux-gnu/GL/lib/dri
