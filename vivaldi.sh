@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 VIVALDI_VERSION_SHORT=8.2
-FFMPEG_VERSIONS="8.2-152-Z-20260911b 8.2-152-Z-20260901"
+FFMPEG_VERSIONS="8.2-152-Z-20260911b"
 FFMPEG_FOUND=NO
 unset VIVALDI_FFMPEG_FUTURE_PATH
 
@@ -13,8 +13,7 @@ for FFMPEG_VERSION_CANDIDATE in $FFMPEG_VERSIONS; do
   fi
 done
 if [ "$FFMPEG_FOUND" = NO ]; then
-  export VIVALDI_FFMPEG_FUTURE_PATH="$XDG_DATA_HOME/vivaldi-extra-libs/media-codecs-$VIVALDI_VERSION_SHORT/libffmpeg.so"
-  nohup sh -c "sleep 7; /app/vivaldi/update-ffmpeg --user" > /dev/null 2>&1 &
+  nohup /app/vivaldi/update-ffmpeg --user >/dev/null 2>&1 &
 fi
 
 if [ "$(uname -m)" = "aarch64" ]; then
