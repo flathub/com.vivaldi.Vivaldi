@@ -1,9 +1,9 @@
 app-id: com.vivaldi.Vivaldi
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 base: org.chromium.Chromium.BaseApp
-base-version: '25.08'
+base-version: '26.08'
 command: vivaldi
 separate-locales: false
 finish-args:
@@ -91,8 +91,8 @@ modules:
         done
     sources:
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_8.2.4133.68-1_amd64.deb
-        sha256: 88ff2a4461906c39a72f731f82cc747905f5e437073af6745aef61af500b04c1
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_8.2.4133.76-1_amd64.deb
+        sha256: 58f7d9632f9c0b148a15d2db0f93294dbe25a2f1a4d270d545c8e95f16cec062
         dest-filename: vivaldi.deb
         only-arches: [x86_64]
         x-checker-data:
@@ -100,8 +100,8 @@ modules:
           url: https://vivaldi.com/download/vivaldi-stable_amd64.deb
           pattern: https://downloads.vivaldi.com/stable/vivaldi-stable_([0-9.]+)-1_amd64.deb
       - type: file
-        url: https://downloads.vivaldi.com/stable/vivaldi-stable_8.2.4133.68-1_arm64.deb
-        sha256: 4a03fde0268e99025f6d914821aa78d5d1d673fd5c81b121308e6ba4743e7867
+        url: https://downloads.vivaldi.com/stable/vivaldi-stable_8.2.4133.76-1_arm64.deb
+        sha256: 728f01c4a6c35728d858e10883830e1e2341d469c74239bc67d9d669bc9a8af0
         dest-filename: vivaldi.deb
         only-arches: [aarch64]
         x-checker-data:
