@@ -2,7 +2,7 @@
 
 # Setup an alternative libffmpeg to handle a wider variety of media
 VIVALDI_VERSION_SHORT=8.2
-FFMPEG_VERSIONS="8.2-152-Z-20260911b"
+FFMPEG_VERSIONS="8.3-153-S-20260918 8.2-152-Z-20260918 8.2-152-Z-20260911b"
 FFMPEG_FOUND=NO
 if [ ! -e "$XDG_DATA_HOME/vivaldi-update-ffmpeg-checked-$VIVALDI_VERSION_SHORT" ]; then
   # This clears any old versions
